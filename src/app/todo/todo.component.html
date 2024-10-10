@@ -1,0 +1,31 @@
+<!-- src/app/todo/todo.component.html -->
+<div class="main_cont">
+    <div class="todo-container">
+        <h1>All Tasks</h1>
+        <input
+          type="text"
+          [(ngModel)]="newTodoTitle"
+          placeholder="Add a new task inside 'All' category"
+          class="task-input"
+        />
+        
+        <select [(ngModel)]="newTodoCategory" class="category-select">
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+        
+        <button (click)="addTodo()" class="add-button">Add</button>
+      
+        <ul class="task-list">
+          <li *ngFor="let todo of todos" class="task-item">
+            <input
+              type="checkbox"
+              [(ngModel)]="todo.completed"
+              (change)="toggleTodoCompletion(todo)"
+            />
+            <span [ngClass]="{ completed: todo.completed }" class="task-title">{{ todo.title }}</span>
+            <span class="task-category">{{ todo.category }}</span>
+            <button (click)="deleteTodo(todo)" class="delete-button">Delete</button>
+          </li>
+        </ul>
+      </div>
+</div>

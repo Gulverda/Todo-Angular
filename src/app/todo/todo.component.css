@@ -1,0 +1,137 @@
+body {
+    background: linear-gradient(135deg, #ff5757, #ff9a9a); /* Gradient background */
+    font-family: 'Arial', sans-serif; /* Font style */
+    margin: 0;
+    padding: 20px;
+    display: flex; /* Centering the container */
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    height: 100vh; /* Full height */
+}
+
+.main_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    max-width: 500px; /* Maximum width of the container */
+    width: 100%; /* Responsive width */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.todo-container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+h1 {
+    font-size: 26px; /* Increased heading font size */
+    color: #333; /* Heading color */
+    text-align: center; /* Centered heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.task-input {
+    width: calc(100% - 60px); /* Full width minus button space */
+    padding: 12px; /* Padding for the input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for the input */
+    margin-right: 10px; /* Space between input and button */
+    font-size: 16px; /* Larger font size */
+    transition: border 0.3s; /* Animation for focus */
+}
+
+.task-input:focus {
+    border-color: #ff4d4d; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.add-button {
+    padding: 12px 20px; /* Button padding */
+    background-color: #ff4d4d; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s; /* Animation on hover */
+}
+
+.add-button:hover {
+    background-color: #ff2a2a; /* Darker shade on hover */
+}
+
+.task-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin-top: 20px; /* Space above the task list */
+}
+
+.task-item {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space between tasks */
+    padding: 10px; /* Padding around task item */
+    background-color: #f9f9f9; /* Light background for task item */
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s; /* Animation for hover */
+}
+
+.task-item:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+.task-title {
+    flex: 1; /* Take up remaining space */
+    padding: 5px; /* Padding for the title */
+    font-size: 16px; /* Font size for the title */
+}
+
+.completed {
+    text-decoration: line-through; /* Strike through for completed tasks */
+    color: #999; /* Color for completed tasks */
+}
+
+.task-category {
+    margin-left: 10px; /* Space between title and category */
+    padding: 4px 8px; /* Padding for the category */
+    border-radius: 12px; /* Rounded corners for category */
+    background-color: #eaeaea; /* Light background for category */
+    font-size: 0.9em; /* Smaller font size for category */
+    font-weight: bold; /* Bold font for category */
+    color: #666; /* Darker color for category text */
+}
+
+.delete-button {
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: #ff4d4d; /* Delete button color */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Space between title and delete button */
+    font-weight: bold; /* Bold font for delete button */
+    transition: color 0.3s; /* Animation for hover */
+}
+
+.delete-button:hover {
+    color: #ff2a2a; /* Darker color on hover */
+}
+
+.category-select {
+    padding: 10px; /* Padding for the dropdown */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and select */
+    font-size: 16px; /* Larger font size */
+    transition: border 0.3s; /* Animation for focus */
+}
+
+.category-select:focus {
+    border-color: #ff4d4d; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
